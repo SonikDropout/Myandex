@@ -1,0 +1,23 @@
+.cat-card-list {
+  width: 100%;
+  max-height: 240px;
+}
+
+.cat-card-list>* {
+  vertical-align: top;
+  max-height: 240px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.cat-image {
+  max-width: 33%;
+}
+
+.cat-card-list:hover .cat-image {opacity: 0.7;}
+
+.cat-info {width: 30%;}
+.cat-info a {display: block;}
+
+.description {width: 33%;}
+.description h4 {margin-top: 0;}
