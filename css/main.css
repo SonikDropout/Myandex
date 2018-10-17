@@ -42,6 +42,7 @@ header{
 
 #wrapper {
   width: 100%;
+  padding: 1%;
 }
 
 #switcher {
@@ -65,17 +66,19 @@ header{
 }
 
 .cat-card {
-  padding-left: 3%;
+  padding: 0 1%;
   display: inline-block;
+  vertical-align: top;
 }
 /* АДАПТИВНОСТЬ ШИРИНЫ КАРТОЧЕК В ЗАВИСИМОСТИ ОТ РАЗРЕШЕНИЯ ЭКРАНА */
 @media screen and (min-width: 1200px){
-  .cat-card {width: 25%;}
+  .cat-card {width: 24.5%;}
 }
 
 @media screen and (max-width: 1199px) {
-  .cat-card {width: 33%;}
+  .cat-card {width: 32.5%;}
 }
+.cat-image {max-width: 100%;}
 /* ПРОЗРАЧНОСТЬ КАРТИНКИ ПРИ НАВЕДЕНИИ НА КАРТОЧКУ */
 .cat-card:hover .cat-image {opacity: 0.7;}
 /* ОТОБРАЖАЕМ ССЫЛКИ В КАРТОЧКЕ КАК БЛОЧНЫЙ ЭЛЕМЕНТ */
@@ -103,6 +106,7 @@ header{
 }
 
 .stars {color: orange;}
+
 /* ПОДВАЛ САЙТА */
 
 footer {
