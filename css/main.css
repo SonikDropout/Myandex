@@ -45,24 +45,25 @@ header{
   padding: 1%;
 }
 
-#switcher {
-  padding: 1%;
-  width: 100%;
-}
+.switcher-input {display:none;}
 
-#switcher a {
+.switch-label {
   display: inline-block;
-  font-size: 1.5em;
-  padding: 8px;
-  color: #000;
-  background-color: #f7f7f7;
-  border: 1px solid #f5f5f5;
-  border-radius: 2px;
+}
+.switch-label[for="list-view"]{width: 46px;}
+.switch-label[for="grid-view"]{width: calc(98% - 46px);}
+.switch-label>i{
+  border: 2px outset #999999;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 2em;
 }
 
-#list-view {
-  margin-left: auto;
-  margin-right: 0;
+input:checked+.switch-label>i{
+  border-style: inset;
+  background-color: #4d4d4d;
+  color: #fff;
 }
 
 .cat-card {
@@ -106,6 +107,37 @@ header{
 }
 
 .stars {color: orange;}
+
+#list-view:checked ~ .cat-card {
+  display: block;
+  width: 100%;
+}
+
+#list-view:checked ~ .cat-card>* {
+  display: block;
+  vertical-align: top;
+}
+
+#list-view:checked ~ .cat-card > .cat-info-wrapper {
+  overflow: hidden;
+}
+
+#list-view:checked ~ .cat-card > .cat-info-wrapper>* {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 2%;
+}
+
+#list-view:checked ~ .cat-card .description {width: 38%;}
+
+#list-view:checked ~ .cat-card .description h4 {margin-top: 10px;}
+
+#list-view:checked ~ .cat-card .cat-info {width: 58%;}
+
+#list-view:checked ~ .cat-card > .cat-image {
+  max-width: 30%;
+  float: left;
+}
 
 /* ПОДВАЛ САЙТА */
 
