@@ -45,6 +45,8 @@ header{
   padding: 1%;
 }
 
+/*СТИЛИ ДЛЯ ПЕРЕКЛЮЧАТЕЛЯ СПИСОК/ПЛИТКА*/
+
 .switcher-input {display:none;}
 
 .switch-label {
@@ -93,6 +95,31 @@ input:checked+.switch-label>i{
   overflow: hidden;
   text-overflow: ellipsis;
 }
+/*РЕАЛИЗАЦИЯ ЗВЕЗДНОГО РЕЙТИГА*/
+.star-input{display: none;}
+.stars {
+  color: orange;
+  float: left;
+  font-size: 1.2em;
+  padding-top: 5px;
+}
+
+.star-ico{
+  float: right;
+  padding-left: 5px;
+}
+.star-ico:last-child{padding-left: 0;}
+
+.star-ico:hover{
+  cursor: pointer;
+}
+
+.star-ico:hover ~ .star-ico:before,
+.star-input:checked ~ .star-ico:before,
+.star-ico:hover:before {
+  content: "\f005"
+}
+
 /* СТИЛИ ДЛЯ ЦЕННИКОВ */
 .price {
   font-size: 1.5em;
@@ -106,7 +133,6 @@ input:checked+.switch-label>i{
   color: #4a4a4a;
 }
 
-.stars {color: orange;}
 
 #list-view:checked ~ .cat-card {
   display: block;
@@ -147,4 +173,5 @@ footer {
   padding-left: 16px;
   background-color: #f5f5f5;
   width: 100%;
+  border-top: 1px solid #000;
 }
